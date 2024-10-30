@@ -20,6 +20,15 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
   },
+  devServer: {
+    port: 3000,
+    open: true,
+    hot: true,
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    },
+    compress: true, // 启用 gzip 压缩
+  },
   module: {
     rules: [
       {
